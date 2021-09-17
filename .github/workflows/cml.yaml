@@ -15,10 +15,9 @@ jobs:
           python train.py
           
           echo "## Model metrics" > report.md
-          cat wine_model.txt >> report.md
+          cat metrics.txt >> report.md
           
           echo "## Data viz" >> report.md
           cml-publish confussion.png --md >> report.md
-          cml-publish residuals.png --md >> report.md
           
           cml-send-comment report.md
