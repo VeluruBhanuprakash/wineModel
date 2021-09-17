@@ -16,8 +16,3 @@ jobs:
           
           echo "## Model metrics" > report.md
           cat metrics.txt >> report.md
-          
-          echo "## Data viz" >> report.md
-          cml-publish confussion.png --md >> report.md
-          
-          cml-send-comment report.md
